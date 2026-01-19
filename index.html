@@ -2,14 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Beacon Sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beacon</title>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .logo {
+      font-size: 64px;
+      font-weight: 700;
+      color: #0aa84f; /* green shade */
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Beacon Test Page</h1>
-  <button onclick="BeaconBar.open()">Open Beacon</button>
+  <div class="logo">Beacon.li</div>
 
-  <!-- Beacon script placed AFTER body exists -->
+  <!-- Beacon script (unchanged, placed safely) -->
   <script>
   (function(b,e,a,c,o,n) {
     b[c] = { orgId:n, open:()=>{ b[c].opened = true } };
