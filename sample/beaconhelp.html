@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beacon Sample</title>
+</head>
+
+<body>
+  <h1>Beacon Test Page</h1>
+  <button onclick="BeaconBar.open()">Open Beacon</button>
+
+  <!-- Beacon script placed AFTER body exists -->
+  <script>
+  (function(b,e,a,c,o,n) {
+    b[c] = { orgId:n, open:()=>{ b[c].opened = true } };
+    var s = e.createElement(a);
+    s.src = 'https://cdn.beacon.li/sdk/latest.js';
+    s.async = true;
+    s.type = 'module';
+    var d = e.createElement(o);
+    d.id = 'beacon-user';
+    e.body.appendChild(d);
+    e.head.appendChild(s);
+  })(window, document, 'script', 'BeaconBar', 'div', 'QTELFW');
+  </script>
+</body>
+</html>
